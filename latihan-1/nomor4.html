@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1 - Intro React JS</title>
+</head>
+
+<body>
+    <!-- Menamoilkan id untuk hasil pemrosesan yang dilakukan oleh reactJS -->
+    <div id="hasil"></div>
+
+    <!-- Sematkan library reactJS yg diimport melalui CDN -->
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <script type="text/babel">
+        // tulis kode ReactJs disini
+        function Text() {
+            return (
+                <h3>Mencari Fungsi Max</h3>
+            )
+        }
+
+        function Max(props) {
+
+            return (
+                <p>
+                    Nilai maximum dari {props.bil1}, {props.bil2}, dan {props.bil3} adalah : {Math.max(props.bil1, props.bil2, props.bil3)}
+                </p>
+            )
+        }
+
+        function ElemenHTML() {
+            return (
+                <div>
+                    <Text />
+                    <Max bil1='10' bil2='3' bil3='4' />
+                </div>
+            );
+        }
+        ReactDOM.render(<ElemenHTML />, hasil);
+    </script>
+
+</body>
+
+</html>

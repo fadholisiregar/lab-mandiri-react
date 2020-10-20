@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React JS</title>
+</head>
+
+<body>
+    <!-- Menamoilkan id untuk hasil pemrosesan yang dilakukan oleh reactJS -->
+    <div id="hasil"></div>
+
+    <!-- Sematkan library reactJS yg diimport melalui CDN -->
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <script type="text/babel">
+        // tulis kode ReactJs disini
+        const hasil = document.getElementById('hasil');
+
+        const nama = 'Fadholi'
+        const nim = '1508102010040'
+        const jeniskelamin = 'laki-laki'
+        const jurusan = 'Fisika'
+        const angkatan = '2015'
+
+        const elemenHTML = (
+            <div>
+                <h2>Biodata</h2>
+                <p>Nama: {nama}</p>
+                <p>Nim: {nim}</p>
+                <p>Jenis Kelamin: {jeniskelamin}</p>
+                <p>Jurusan: {jurusan}</p>
+                <p>Angkatan: {angkatan}</p>
+            </div>
+        );
+        ReactDOM.render(elemenHTML, hasil);
+    </script>
+
+</body>
+
+</html>
